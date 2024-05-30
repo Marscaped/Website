@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="with=device-width, initial-scale=1.0">
+    <!-- <meta http-equiv="refresh" content="120"> -->
+    <link rel="stylesheet" href="Style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="icon" href="images/Marslogo.png">
+    <title>Marsscape: Homepage</title>
+</head>
+<body>
+    <section class="header">
+        <nav>
+            <a href="Home.html"><img src="images/Marslogo.png" alt=""></a>
+            <div class="nav-links" id="navLinks">
+                <i class='bx bx-x'onclick="hideMenu()"></i>
+                <ul>
+                    <li class="home"><a href="#">HOME</a></li>
+                    <!-- <li class="edit"><a href="Edit.html">EDIT</a></li> -->
+                    <li class="about"><a href="Aboutus.html">ABOUT US</a></li>
+                    <li class="login"><a href="Login.html">LOG OUT</a></li>
+                </ul>
+            </div>
+            <i class='bx bx-menu' onclick="showMenu()"></i>
+        </nav>
+        <main class="data">
+            <div class="info">
+            <table>
+                <caption>Sensors</caption>
+                <thead>
+                    <tr>
+                        <th>Temperature</th>
+                        <th>Humidity</th>
+                        <th>Soil moisture</th>
+                        <th>Brightness</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td id="temp">Loading...</td>
+                        <td id="humid">Loading...</td>
+                        <td id="mois">Loading...</td>
+                        <td id="brigh">Loading...</td>
+                    </tr>
+                </tbody>
+            </table>
+            <input type="button" class="refresh" onclick="refresh()" value="refresh"><br>
+            <div class="container">
+                <label class="desc" for="heating">Heating mate</label>
+                <label class="switch">
+                    <input type="checkbox" onclick="changeDeviceState('Heatmat', 'heating')"  name="heatingMate" id="heating" >
+                    <span class="slider"></span>
+                </label>
+                <label class="desc" for="fan">Fan</label>
+                <label class="switch">
+                    <input type="checkbox" onclick="changeDeviceState('Fan', 'fan')" name="Fan" id="fan">
+                    <span class="slider"></span>
+                </label>
+                <label class="desc" for="water">Water Pump</label>
+                <label class="switch">
+                    <input type="checkbox" onclick="changeDeviceState('Pump', 'water')" name="WaterPump" id="water">
+                    <span class="slider"></span>
+                </label>
+                <label class="desc" for="light">Light</label>
+                <label class="switch">
+                    <input type="checkbox" onclick="changeDeviceState('Light', 'light')" name="Light" id="light">
+                    <span class="slider"></span>
+                </label>
+                <label class="desc" for="Auto">Auto</label>
+                <label class="switch">
+                    <input type="checkbox" onclick="changeDeviceState('Auto', 'Auto')" name="Auto" id="Auto">
+                    <span class="slider"></span>
+                </label>
+            </div>
+         </div>
+         <div>
+         </div>
+        </main>
+    </section>
+    <script src="Script.js"></script>
+</body>
+</html>
